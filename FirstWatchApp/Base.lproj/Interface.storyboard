@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <label width="50" alignment="left" text="helo" id="zez-cH-NWK"/>
+                        <button width="1" alignment="left" title="Up" id="rTH-EE-Mwv">
+                            <connections>
+                                <action selector="UpButton" destination="AgC-eL-Hgc" id="9mt-OI-oDR"/>
+                                <segue destination="qDq-2M-tT8" kind="push" id="Ob8-0H-q4s"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Down" id="6ph-wP-cBP">
+                            <connections>
+                                <action selector="DownButton" destination="AgC-eL-Hgc" id="SxB-qd-fa7"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="downbtn" destination="6ph-wP-cBP" id="TPi-Mc-noc"/>
+                        <outlet property="lable1" destination="zez-cH-NWK" id="eUk-kA-L9G"/>
+                        <outlet property="upbtn" destination="rTH-EE-Mwv" id="HDV-lc-Qgi"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="398" y="305"/>
+        </scene>
+        <!--ScndView-->
+        <scene sceneID="D2P-iV-XfK">
+            <objects>
+                <controller title="ScndView" hidesWhenLoading="NO" id="qDq-2M-tT8" customClass="ScndInterfaceController">
+                    <items>
+                        <label width="1" alignment="left" text="Scnd View" textAlignment="left" id="MVS-kH-y60"/>
+                        <map height="100" alignment="left" id="f95-gc-0pA"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="641" y="305"/>
+        </scene>
+        <!--Third Interface Controller-->
+        <scene sceneID="ayr-rG-V79">
+            <objects>
+                <controller hidesWhenLoading="NO" id="9Aq-Hy-a2l" customClass="ThirdInterfaceController">
+                    <items>
+                        <table alignment="left" id="80D-bd-23z">
+                            <items>
+                                <tableRow id="Ots-4W-JkU" customClass="Tableview">
+                                    <group key="rootItem" width="1" alignment="left" id="v1R-Lm-zsX">
+                                        <items>
+                                            <label alignment="left" text="Label" id="Sar-JR-sEz"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lable" destination="Sar-JR-sEz" id="ydH-4e-eki"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="80D-bd-23z" id="fbQ-Uj-MSa"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="382" y="595"/>
+        </scene>
+    </scenes>
+</document>
